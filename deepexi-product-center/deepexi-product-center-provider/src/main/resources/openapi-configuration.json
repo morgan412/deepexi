@@ -1,0 +1,16 @@
+{
+  "resourcePackages": [
+    "com.deepexi.product.controller"
+  ],
+  "prettyPrint" : true,
+  "openAPI": {
+    "info": {
+      "version": "1.0",
+      "title": "deepexi",
+      "description": "This is a demo.  You can find source code at [https://github.com/Morgan412/deepexi.git](https://github.com/Morgan412/deepexi.git)",
+      "contact": {
+        "email": "zouxq412@foxmail.com"
+      }
+    }
+  }
+}

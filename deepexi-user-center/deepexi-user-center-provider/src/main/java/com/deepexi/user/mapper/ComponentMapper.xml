@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--客户映射 指定到dao接口 -->
+<mapper namespace="com.deepexi.user.mapper.ComponentMapper">
+    <!--id与dao接口的方法名一直，指定结果类型，和参数类型 -->
+
+    <select id="selectPageVo" resultType="com.deepexi.user.domain.vo.ComponentVo">
+        SELECT c1.*, c2.name as category_name
+        FROM
+            component c1,
+            component_category c2
+        WHERE
+            c1.category_id = c2.id
+            <if test="name != null and name != ''">
+                AND c1.name LIKE concat('%', #{name}, '%')
+            </if>
+            <if test="categoryId != null and categoryId != ''">
+                AND c1.category_id = #{categoryId}
+            </if>
+            <if test="dr != null">
+              AND c1.dr = #{dr}
+            </if>
+    </select>
+
+</mapper>
