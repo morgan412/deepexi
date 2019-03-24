@@ -12,7 +12,7 @@ echo "use docker maven"
 docker run --rm \
    -v $m2_cache:/root/.m2 \
    -v $proj_home:/usr/src/mymaven \
-   -w /usr/src/mymaven $img_mvn mvn clean package -U
+   -w /usr/src/mymaven $img_mvn mvn clean install -U
 
 sudo mv $proj_home/deepexi-user-center-provider/target/deepexi-user-center-provider-*.jar $proj_home/deepexi-user-center-provider/target/demo.jar # 兼容所有sh脚本
 docker build -t $img_output .
@@ -43,6 +43,6 @@ docker run -d --restart=on-failure:5 --privileged=true \
         -Xloggc:logs/gc_$version.log \
         -jar /home/demo.jar \
           --spring.profiles.active=prod \
-          --spring.datasource.url=$spring_datasource_url \
-          --spring.datasource.username=root \
-          --spring.datasource.password=my-secret-ab
+        #  --spring.datasource.url=$spring_datasource_url \
+        #  --spring.datasource.username=root \
+        #  --spring.datasource.password=my-secret-ab

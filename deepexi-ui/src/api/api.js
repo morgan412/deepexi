@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-// axios.defaults.baseURL='http://127.0.0.1:8081/product/api/v1'
-let base = 'http://127.0.0.1:8081/product/api/v1';
+// axios.defaults.baseURL='http://127.0.0.1:8081'
+axios.defaults.baseURL='http://106.13.11.180:8081'
+let base = '/product/api/v1';
 
 export const getComponentCategorySelect = () => { return axios.get(`${base}/components/category/select`); };
 

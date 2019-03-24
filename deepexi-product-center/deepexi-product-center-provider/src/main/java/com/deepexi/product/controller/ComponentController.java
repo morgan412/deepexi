@@ -8,12 +8,8 @@ import com.deepexi.user.domain.query.ComponentQuery;
 import com.deepexi.user.service.ComponentService;
 import com.deepexi.util.config.Payload;
 import com.deepexi.util.constant.ContentType;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.info.Info;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -62,7 +58,7 @@ public class ComponentController {
         tags = {"component"})
     @POST
     @Path("/")
-    public Payload createComponent(@BeanParam Component component) {
+    public Payload createComponent(Component component) {
         return new Payload(componentService.createComponent(component));
     }
 

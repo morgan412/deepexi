@@ -10,7 +10,7 @@
     mounted: function () {
         SwaggerUI({
           dom_id: '#swagger-ui',
-          url: "http://localhost:8081/product/openapi/openapi.json",
+          url: "http://106.13.11.180:8081/product/openapi/openapi.json",
           deepLinking: true,
         })
     },
