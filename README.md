@@ -28,6 +28,13 @@
 &ensp;&ensp;&ensp;&ensp;另外，我使用 Vue + Element 简单搭建了一个前端工程 `deepexi-ui` 用于展现结果
 
 
+**问题：**
+
+&ensp;&ensp;&ensp;&ensp;dubbo 只支持 RPC 调用，使得服务提供方与调用方在代码上产生了较强的依赖，服务提供者需要不断将包含抽象接口的 jar 包打包出来供消费者使用，且不能实现跨语言
+
+&ensp;&ensp;&ensp;&ensp;dubbo 是面向服务，微服务的数量多起来后，dubbo会比较难管理
+
+&ensp;&ensp;&ensp;&ensp;dubbo 的服务接口要尽可能大粒度，应代表一个完整功能，从官网了解，目前还不支持分布式事务，有需要需另外实现
 
 
 ## 三、部署
