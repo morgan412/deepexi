@@ -1,4 +1,4 @@
-package com.deepexi.product.controller;
+package com.deepexi.user.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.deepexi.user.domain.eo.ComponentCategory;
